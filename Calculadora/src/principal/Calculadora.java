@@ -24,14 +24,20 @@ public class Calculadora{
             } else if (operacion.equalsIgnoreCase("*")){
                 resultado = operaciones.multiplicar(operandos[0], operandos[1]);
                 System.out.println ("Resultado: " + resultado);
-            } else if (operacion.equalsIgnoreCase("/")){
-                resultado = operaciones.dividir(operandos[0], operandos[1]);
+            } else if (operacion.equalsIgnoreCase("/"))
+            {try {
+            	 resultado = operaciones.dividir(operandos[0], operandos[1]);
                 System.out.println ("Resultado: " + resultado);
+            }catch(ArithmeticException excepcion) {
+            	System.out.println("Error aritmetico: " + excepcion.getMessage());
+            	System.out.println("Fin del programa");
+            }
+               
             } else if (operacion.equalsIgnoreCase("%")){
                 resultado = operaciones.resto(operandos[0], operandos[1]);
                 System.out.println ("Resultado: " + resultado);
             } else {
-                System.out.println ("Operación no válida");
+                System.out.println ("Operaciï¿½n no vï¿½lida");
             }
         }   while (menu.repetir());
     }

@@ -1,5 +1,6 @@
 package operaciones;
 public class Operaciones{
+
     public int sumar (int valor1, int valor2){
         int numero;
         numero = valor1 + valor2;
